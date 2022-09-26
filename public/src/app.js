@@ -2,30 +2,32 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const foodDictionary = {
-  Indian: [
+  indian: [
     { name: "Biriyani", rating: "5.0" },
     { name: "Aloo Gobi", rating: "4.6" },
     { name: "Chicken Tikka Masala", rating: "4.9" },
   ],
-  Chinese: [
-    { name: "Chicken Noodles", rating: "4.6" },
+  chinese: [
+    { name: "Chicken Friedrice", rating: "4.6" },
     { name: "Chicken Soup", rating: "4.2" },
+    { name: "Hakka Noodles", rating: "4.1" },
   ],
-  Arabic: [
+  arabic: [
     { name: "Shawarma", rating: "4.9" },
     { name: "Grilled Chicken", rating: "4.5" },
+    { name: "Mandi Biriyani", rating: "4.0" },
   ],
 };
 
 export default function app() {
-  var [library, setlibrary] = useState("Indian");
+  var [library, setlibrary] = useState("indian");
   function foodLibrary(event) {
     setlibrary(event);
   }
   return (
     <div className="app">
-      <h1>Good food🍲</h1>
-      <p>These app show ratings of my favourite foods out of 5.</p>
+      <h1>Food Cusine </h1>
+      <p>The app which shows ratings of my favourite foods out of 5.</p>
       <p>Click each button to view 👇🏽</p>
       <div>
         {Object.keys(foodDictionary).map((event) => (
